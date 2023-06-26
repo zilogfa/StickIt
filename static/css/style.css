@@ -20,7 +20,11 @@ padding: 0 8%;
 opacity: 1;
 height: 500px;
 background-color:#5e009d;
+background-color:#ff0062;
 background-image: linear-gradient(to bottom right, rgb(255, 99, 198), rgb(243, 41, 85));
+background-position: center center;
+background-image: url("/static/img/header.png");
+background-repeat: no-repeat;
 }
     
 .main-header{
@@ -30,25 +34,32 @@ color: #fff;
 
 }
 .header-title {
-font-size: 3rem;
+font-size: 2.5rem;
 font-weight: 900;
 
 }
 .header-subtitle {
-font-size: 1.5rem;
+font-size: 1.2rem;
 font-weight: 500;
+}
+
+section img{
+    margin: 4%;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
 }
 
 @media (max-width: 800px){
 
 .main-header{
-padding: 16%;
+padding: 14%;
 text-align: center;
 color: #fff;
 }
 
 .header-title {
-font-size: 3.2rem;
+font-size: 1.8rem;
 font-weight: 900;
 
 }
@@ -81,7 +92,9 @@ font-weight: 500;
     width: 300px;
 }
 
-.form-sec{}
+.form-sec{
+    height-min: 200px;
+}
 
 
 .form-div {
@@ -90,6 +103,8 @@ font-weight: 500;
     margin-top: 2%;
     margin-bottom: 2%;
 }
+
+
 
 
 /* ______________ STICKER DESIGN ______ */

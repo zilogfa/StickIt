@@ -6,7 +6,7 @@
     <div class="form-div"> 
     <form action="{{url_for('home')}}" method="post">
         {{ form.csrf_token }}
-        {{ form.todo(size=40, placeholder='Add a Task') }} <br>
+        {{ form.todo(size=40, placeholder='What’s on your mind?') }} <br>
         {{ form.submit }}
     </form>
      </div>
