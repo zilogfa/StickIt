@@ -1,0 +1,53 @@
+{% include 'header.html' %}
+
+
+
+<section class="container-fluid form-sec" style="background-color:#252525">
+    <div class="form-div"> 
+    <form action="{{url_for('home')}}" method="post">
+        {{ form.csrf_token }}
+        {{ form.todo(size=40, placeholder='Add a Task') }} <br>
+        {{ form.submit }}
+    </form>
+     </div>
+</section>
+
+
+{% if data %}
+
+        <section class="todo-sec container-fluid">
+        <div class="row">
+        {% for item in data %}
+        {% if current_user %}
+        <div class="col-lg-4">
+        <div class="todo-div">
+
+            <div class="form-todo"> <b>{{item.todo}}</b> </div>
+            <div class="form-time"> {{item.post_time}}</div>
+            <div class="form-delete"><a href="#" class="delete-btn" data-post-id="{{ item.id }}" style="text-decoration: none;">❌</a></div>
+            <div class="form-edit"><a href="{{url_for('edit_todo', item_id=item.id)}}" style="text-decoration: none; color: #252525;">✎ Edit</a></div>
+        </div>
+        </div>
+
+        {% endif %}
+        {% endfor %}
+        </div>
+        </section>
+
+{% else %}
+
+<section class="todo-sec container-fluid">
+    <div class="row">
+        <div class="col-sm-4">
+        <div class="no-todo-div">
+            <div class="form-todo" style="margin: auto; margin-top:2%; color:rgb(12, 39, 32);">
+                 <b>Your to-do list is waiting! <br> Add a task <br>And <span style="font-size: larger;">StickIT</span> to your list!</b> 
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+{% endif %}
+
+{% include 'footer.html' %}

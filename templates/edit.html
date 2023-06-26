@@ -1,0 +1,15 @@
+{% block content %}
+{% include 'header.html' %}
+
+<section class="container-fluid form-sec" style="background-color:#252525">
+    <div class="form-div"> 
+    <form method="POST">
+    {{ form.csrf_token }}
+    {{ form.todo(size=40, placeholder='Stick a new task') }} <br>
+    <button class="btn btn-outline-light" style="margin-left:4px ;">✎ Submit</button>
+    </form>
+    </div>
+</section>
+
+{% include 'footer.html' %}
+{% endblock %}

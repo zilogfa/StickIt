@@ -1,0 +1,41 @@
+{% include 'header.html' %}
+
+<section class="container">
+
+    <div class="card mb-3 login-card" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="../static/stickit-login.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <!-- <h5 class="card-title">Login</h5> -->
+              <p class="card-text">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                  {% for message in messages %}
+                   <p>{{ message }}</p>  
+                  {% endfor %}
+                {% else %}
+                    <a style="color:rgb(124, 82, 100)" href="{{url_for('register')}}">Don't have an account? Signup!</a>
+                {% endif %}
+                
+                {% endwith %}
+              </p>
+
+                <form method="POST" action="{{url_for('login')}}">
+                    {{ form.hidden_tag() }}
+                    {{ form.username }}
+                    {{ form.password }}
+                    {{ form.submit }}
+                </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+</section>
+
+{% include 'footer.html' %}

@@ -1,0 +1,31 @@
+{% include 'header.html' %}
+
+<section class="container">
+
+    <div class="card mb-3 login-card" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="../static/stickit-register.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Register</h5>
+
+              <form method="POST" action="{{url_for('register')}}">
+                {{ form.hidden_tag() }}
+                {{ form.name }}
+                {{ form.username }}
+                {{ form.profileimage }}
+                {{ form.password }}
+                {{ form.submit }}
+            </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+</section>
+
+{% include 'footer.html' %}

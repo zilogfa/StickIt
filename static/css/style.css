@@ -1,0 +1,265 @@
+
+body {
+font-family: 'Montserrat', sans-serif;
+background-color: #EAEAEA;
+display: flex;
+position: relative;
+flex-direction: column;
+min-height: 100vh;
+}
+
+
+
+/*_____________________ HEADER --*/
+
+.nav-div {
+padding: 0 8%;
+}
+
+.header-bg {
+opacity: 1;
+height: 500px;
+background-color:#5e009d;
+background-image: linear-gradient(to bottom right, rgb(255, 99, 198), rgb(243, 41, 85));
+}
+    
+.main-header{
+padding: 6%;
+text-align: center;
+color: #fff;
+
+}
+.header-title {
+font-size: 3rem;
+font-weight: 900;
+
+}
+.header-subtitle {
+font-size: 1.5rem;
+font-weight: 500;
+}
+
+@media (max-width: 800px){
+
+.main-header{
+padding: 16%;
+text-align: center;
+color: #fff;
+}
+
+.header-title {
+font-size: 3.2rem;
+font-weight: 900;
+
+}
+
+.header-subtitle {
+font-size: 1.2rem;
+font-weight: 500;
+}
+}
+
+
+
+/* --- REGISTER / LOGIN ---- */
+
+.login-card {
+    margin: auto;
+    margin-top: 2%;
+}
+
+
+
+/* --- ADD CONTENT ---- */
+
+.textArea-sec{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    resize: none;
+    height: 100px;
+    width: 300px;
+}
+
+.form-sec{}
+
+
+.form-div {
+    width: 400px;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+/* ______________ STICKER DESIGN ______ */
+
+.todo-sec {
+    padding: 2% 15%;
+}
+
+.todo-div {
+
+    height: 200px;
+    width: 300px;
+    background-image: linear-gradient(0deg, #ffdd60 82%, #ffda00 18%);
+    padding: 10%;
+    margin: 2%;
+    position: relative;
+    box-shadow: 0px 5px 3px #00000033;
+    
+}
+
+.no-todo-div {
+
+    height: 200px;
+    width: 300px;
+    background-image: linear-gradient(0deg, #ddff60 82%, #d2ec0d 18%);
+    padding: 10%;
+    margin: 2%;
+    position: relative;
+    box-shadow: 0px 5px 3px #00000033;
+    
+}
+
+
+.form-todo {
+    position: absolute;
+    top: 45px;
+    left: 15px;
+    color: #4e2406;
+}
+
+.form-time {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-style: italic;
+    color: #af7717;
+    font-size: smaller;
+}
+
+.form-delete {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+}
+
+
+.sticker-delete {
+    background: none;
+    border: none;
+}
+
+.form-edit {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: smaller;
+}
+
+/* ______________ END STICKER DESIGN _______ */
+
+
+
+/* _________ DELETE POPUP BOX  */
+
+.bg-blur {
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #131313;
+    opacity: 30%;
+    z-index: 1;
+    
+}
+
+.popup {
+    position: absolute;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 6px;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    z-index: 2;
+}
+
+.open-popup{
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 10px 20px #00000033;
+}
+
+.popup img{
+    width: 75px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px #00000033;
+}
+
+.popup h2 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 1px 0 1px;
+}
+
+
+.popup button {
+    width: 48%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px 0;
+    color: #fff;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px #00000033;
+    text-decoration: none;
+    border: none;
+
+}
+
+.btn-delete{
+    background: #d11f1f;
+    color: #fff;
+    border: 0;
+    text-decoration: none;
+
+}
+
+.btn-delete:hover{
+    background-color: #b11616;
+}
+
+.btn-cancel {
+    background-color: #131313;
+}
+.btn-cancel:hover {
+    background-color: #383838;
+}
+
+/* ____________ END DELETE POP */
+
+
+
+
+/* FOOTER */
+
+footer {
+margin-top: auto;
+background-color:#323232;
+padding: 3%;
+}
+
+.footer-text {
+text-align: center;
+color: #fff;
+}
+
